@@ -1,4 +1,4 @@
-exports.GetTourbyId = (req, res) => {
+exports.PatchTour= (req, res) => {
   const id = (req.params.id = 1);
   const tour = Tours.find((el) => (el.id = id));
 
@@ -10,9 +10,10 @@ exports.GetTourbyId = (req, res) => {
     });
   }
   res.status(200).json({
-    status: "success",
+    status: "Update success",
     data: {
+      //updated tour data
       tour,
     },
   });
-};
+});

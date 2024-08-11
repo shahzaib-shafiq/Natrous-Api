@@ -1,4 +1,4 @@
-exports.GetTourbyId = (req, res) => {
+exports.DeleteTour = (req, res) => {
   const id = (req.params.id = 1);
   const tour = Tours.find((el) => (el.id = id));
 
@@ -10,9 +10,9 @@ exports.GetTourbyId = (req, res) => {
     });
   }
   res.status(200).json({
-    status: "success",
-    data: {
-      tour,
-    },
+    status: "Delete success",
+    data:
+      //updated tour data
+      null,
   });
 };
