@@ -1,5 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const { getAlTours } = require("../Controller/GetAllTours");
-router.get("/v1/tours", getAlTours);
+
+// Correct the function name to match the export from the controller
+const { GetAllTours } = require("../Controller/GetAllTours");
+router.get("/v1/tours", GetAllTours);
+
 module.exports = router;

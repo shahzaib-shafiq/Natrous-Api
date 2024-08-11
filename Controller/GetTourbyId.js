@@ -1,3 +1,10 @@
+const fs = require("fs");
+const path = require("path");
+const Tours = JSON.parse(
+  fs.readFileSync(`${__dirname}/../dev-data/data/tours-simple.json`)
+);
+const filePath = path.join(__dirname, "../dev-data/data/tours-simple.json");
+
 exports.GetTourbyId = (req, res) => {
   const id = (req.params.id = 1);
   const tour = Tours.find((el) => (el.id = id));
